@@ -149,41 +149,6 @@
 								</c:forEach>				
         					</select>
         				</div>
-        				<c:if test = "${brand == 'Car'}">
-        				<!-- <p>Kiểu Dáng</p>
-        				<div class="select-range">
-        					<select name="kieuDang" class="form-control">
-        						<option value="">Tất cả hệ điều hành</option>
-								<option value="ubuntu">Ubuntu</option>
-								<option value="dos">DOS</option>
-								<option value="mac">MAC</option>
-								<option value="linux">Linux</option>
-								<option value="windows 10">Window 10</option>				
-        					</select>
-        				</div> -->
-        				<!-- <p>Số KM Đã Đi</p>
-        				<div class="select-range">
-        					<select name="soKM" class="form-control">
-        						<option value="">Tất cả ram</option>
-        						<option value="200 KM">2 KM</option>
-								<option value="300 KM">3 KM</option>
-								<option value="400 KM">4 KM</option>
-								<option value="600 KM">6 KM</option>
-								<option value="800 KM">8 KM</option>		
-								<option value="1000 KM">16 KM</option>					
-        					</select>
-        				</div> -->
-        				<p>Số Chỗ Ngồi</p>
-        				<div class="select-range">
-        					<select name="soChoNgoi" class="form-control">
-        						<option value="">Tất cả chỗ ngồi</option>
-        						<c:forEach var="manufactor" items="${pinSet}" varStatus="loop">
-								<option value="${manufactor}">${manufactor}</option>
-								</c:forEach>				
-        					</select>
-        				</div>
-        				</c:if>
-        					<input type="hidden" name="brand" value="${brand}">
         					<input class="search-submit" type="submit" value="Lọc sản phẩm">
 						</form>
 						

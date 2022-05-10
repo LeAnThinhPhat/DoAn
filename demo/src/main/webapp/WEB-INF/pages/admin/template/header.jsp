@@ -15,11 +15,12 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+  
+  <link rel="stylesheet" href="<c:url value='/Frontend/css/notification.css' />" />
 </head>
 
 <body>
-
+	
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">

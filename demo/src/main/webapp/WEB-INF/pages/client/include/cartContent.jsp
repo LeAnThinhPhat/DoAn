@@ -11,7 +11,7 @@ html
 }
 </style>
 </head>
-<script type="text/javascript">	  
+<!-- <script type="text/javascript">	  
 	$(document).ready(function() { 
 	 
 		 $(".table-convert-price .covertPriceProduct").each(function() {
@@ -24,7 +24,7 @@ html
 			});
 		 
 	  });
-	</script>
+	</script> -->
 
 <body>
 <br>

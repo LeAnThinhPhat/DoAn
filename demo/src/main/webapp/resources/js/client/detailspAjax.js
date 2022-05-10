@@ -10,15 +10,19 @@ $(document).ready(function(){
 			success: function(result){
 				if(result.status == "false")
 				{
-					window.alert("Sản phẩm đang hết hàng, quý khách vui lòng quay lại sau");	
+					$("#notification-fail").fadeIn(500).text('Thêm sản phẩm không thành công');				
+			        $("#notification-fail").fadeOut(1000);
 				}else
 				{
-					window.alert("Đã thêm sản phẩm vào giỏ hàng");
+
+				$("#notification-success").fadeIn(500).text('Thêm sản phẩm thành công');				
+			    $("#notification-success").fadeOut(1000);
 				}	
 			},
 			error : function(e){
-				alert("Error: ",e);
-				console.log("Error" , e );
+				$("#notification-fail").fadeIn(500).text('Error' + e);				
+			    $("#notification-fail").fadeOut(1000);
+			    console.log("Error" , e );
 			}
 		});
 	}

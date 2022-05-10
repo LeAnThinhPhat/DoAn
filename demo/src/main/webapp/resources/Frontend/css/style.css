@@ -1627,33 +1627,3 @@ background: linear-gradient(163deg, rgba(10,128,142,1) 0%, rgba(88,121,145,0.815
 		padding:20px 0px;
 	}
 }
-@media screen and (max-width:414px){
-.images_1_of_4 {
-    width: 92%;
-}
-.images_1_of_4 {
-    margin-right: 0%;
-}
-.top-nav ul li a {
-    padding: 6px 2px;
-}
-a#show_cart {
-    width: 90%;
-	    padding: 7px 0;
-}
-}
-@media screen and (max-width:384px){
-.top-nav ul li a {
-    font-size: 0.8em;
-}
-}
-@media screen and (max-width:320px){
-.wrap {
-    width: 95%;
-}
-.top-nav ul li a {
-    font-size: 0.7125em;
-	padding: 6px 1px;
-}
-
-}

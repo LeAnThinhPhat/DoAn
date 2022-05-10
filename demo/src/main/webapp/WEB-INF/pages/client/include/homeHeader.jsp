@@ -62,7 +62,7 @@
 						<li><a href="<%=request.getContextPath()%>/account">Tài
 								khoản</a></li>
 						<li><a href="<%=request.getContextPath()%>/cart"><span>Giỏ
-									hàng&nbsp;&nbsp;: </span></a><span
+									hàng&nbsp;&nbsp; </span></a><span
 							class="glyphicon glyphicon-shopping-cart"></span></li>
 						<li><a href="<%=request.getContextPath()%>/logout"> Đăng
 								xuất</a></li>

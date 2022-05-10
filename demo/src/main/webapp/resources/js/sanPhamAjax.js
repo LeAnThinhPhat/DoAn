@@ -317,7 +317,8 @@ $(document).ready(function() {
   			success : function(response) {
   				if(response.status == "success"){
   					$('.otherModal').modal('hide');
-  					alert("Cập nhật thành công");
+  					$("#notification-success").fadeIn(500).text('Cập nhật thành công');				
+			        $("#notification-success").fadeOut(1000);
   				} else {
   					$('input, textarea').next().remove();
   		            $.each(response.errorMessages, function(key,value){
@@ -342,19 +343,22 @@ $(document).ready(function() {
 		
     	var sanPhamId = $(this).parent().prev().children().val();	
 		var workingObject = $(this);
-		
-		var confirmation = confirm("Bạn chắc chắn xóa sản phẩm này ?");
-		if(confirmation){
+		/*
+		var confirmation = confirm("Bạn chắc chắn xóa sản phẩm này ?");*/
+		if(true){
 		  $.ajax({
 			  async:false,
 			  type : "DELETE",
 			  url : "http://localhost:8080/lazapee/api/san-pham/delete/" + sanPhamId,
 			  success: function(resultMsg){
 				  resetDataForDelete();
-				  alert("Xóa thành công");
+				  $("#notification-success").fadeIn(500).text('Sản phẩm đã được xoá');				
+			      $("#notification-success").fadeOut(1000);
 			  },
 			  error : function(e) {
-				 console.log("ERROR: ", e);
+				$("#notification-fail").fadeIn(500).text('Không thể xoá sản phẩm');				
+			    $("#notification-fail").fadeOut(1000);
+			    console.log("Error" , e );
 			  }
 		  });	
 		}

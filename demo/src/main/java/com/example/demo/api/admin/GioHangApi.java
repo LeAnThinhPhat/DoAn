@@ -68,7 +68,7 @@ public class GioHangApi  {
 				if(clientCookies[i].getName().equals(id))     //Neu san pham da co trong cookie tang so luong them 1
 				{				
 					clientCookies[i].setValue(Integer.toString(Integer.parseInt(clientCookies[i].getValue())+1));
-					clientCookies[i].setPath("/carshop");
+					clientCookies[i].setPath("/lazapee");
 					clientCookies[i].setMaxAge(60*60*24*7);
 					response.addCookie(clientCookies[i]);
 					found = true;
@@ -78,7 +78,7 @@ public class GioHangApi  {
 			if(!found)   //Neu san pham ko co trong cookie,them vao cookie
 			{
 				Cookie c = new Cookie(id,"1");
-				c.setPath("/carshop");
+				c.setPath("/lazapee");
 				c.setMaxAge(60*60*24*7);
 				response.addCookie(c);
 			}
@@ -123,7 +123,7 @@ public class GioHangApi  {
 				if(clientCookies[i].getName().equals(id))
 				{						
 					clientCookies[i].setValue(value);
-					clientCookies[i].setPath("/carshop");
+					clientCookies[i].setPath("/lazapee");
 					clientCookies[i].setMaxAge(60*60*24*7);
 					response.addCookie(clientCookies[i]);
 					break;
@@ -154,7 +154,7 @@ public class GioHangApi  {
 				if(clientCookies[i].getName().equals(id))
 				{						
 					clientCookies[i].setMaxAge(0);
-					clientCookies[i].setPath("/carshop");
+					clientCookies[i].setPath("/lazapee");
 					System.out.println(clientCookies[i].getMaxAge());
 					response.addCookie(clientCookies[i]);
 					break;

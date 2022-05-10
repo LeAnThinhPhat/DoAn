@@ -90,7 +90,8 @@ $(document).ready(function() {
  			success : function(response) {
  				if(response.status == "success"){
  					$('#taiKhoanModal').modal('hide');
- 					alert("Thêm thành công");
+					$("#notification-success").fadeIn(500).text('Thêm tài khoản thành công');				
+			        $("#notification-success").fadeOut(1000);
  				} else {
  			    	$('input').next().remove();
  		            $.each(response.errorMessages, function(key,value){
@@ -119,9 +120,13 @@ $(document).ready(function() {
 			  url : "http://localhost:8080/lazapee/api/tai-khoan/delete/" + taiKhoanId,
 			  success: function(resultMsg){
 				  resetData();
+				  $("#notification-success").fadeIn(500).text('Xoá tài khoản thành công');				
+			        $("#notification-success").fadeOut(1000);
 			  },
 			  error : function(e) {
-				 console.log("ERROR: ", e);
+				$("#notification-fail").fadeIn(500).text('Lỗi');				
+			    $("#notification-fail").fadeOut(1000);
+			    console.log("Error" , e );
 			  }
 		  });
 		}

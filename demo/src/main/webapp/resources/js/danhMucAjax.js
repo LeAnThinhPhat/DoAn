@@ -91,7 +91,8 @@ $(document).ready(function(){
 			success : function(response) {
 				if(response.status == "success"){
 					$('#danhMucModal').modal('hide');
-					alert("Thêm thành công");
+					$("#notification-success").fadeIn(500).text('Thêm danh mục thành công');				
+			        $("#notification-success").fadeOut(1000);
 				} else {
 			    	$('input').next().remove();
 		             $.each(response.errorMessages, function(key,value){
@@ -152,7 +153,8 @@ $(document).ready(function(){
 				
 				if(response.status == "success"){
 					$('#danhMucModal').modal('hide');
-					alert("Cập nhật thành công");
+					$("#notification-success").fadeIn(500).text('Cập nhật thành công');				
+			        $("#notification-success").fadeOut(1000);
 				} else {
 			    	$('input').next().remove();
 		            $.each(response.errorMessages, function(key,value){
@@ -180,10 +182,12 @@ $(document).ready(function(){
 			  url : "http://localhost:8080/lazapee/api/danh-muc/delete/" + danhMucId,
 			  success: function(resultMsg){
 				 resetDataForDelete();
-				 alert("Xóa thành công");
+				 $("#notification-success").fadeIn(500).text('Xoá sản phẩm thành công');				
+			        $("#notification-success").fadeOut(1000);
 			  },
 			  error : function(e) {
-				 alert("Không thể xóa danh mục này ! Hãy kiểm tra lại");
+					$("#notification-fail").fadeIn(500).text('Xoá sản phẩm không thành công');				
+			        $("#notification-fail").fadeOut(1000);
 				 console.log("ERROR: ", e);
 			  }
 		  });

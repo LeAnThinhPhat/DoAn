@@ -20,7 +20,7 @@
 			type : "GET",
 			data : data,
 			contentType : "application/json",
-			url : "http://localhost:8080/carshop/api/don-hang/report",
+			url : "http://localhost:8080/lazapee/api/don-hang/report",
 			success : function(data) {
 				for (var i = 0; i < data.length; i++) {
 					label.push(data[i][0] + "/" + data[i][1]);
@@ -39,7 +39,7 @@
 		data = {
 			labels : label,
 			datasets : [ {
-				label : "Tổng giá trị ( Tỷ đồng)",
+				label : "Tổng giá trị ( Triệu đồng)",
 				backgroundColor : "#0000ff",
 				borderColor : "#0000ff",
 				borderWidth : 3,
@@ -82,6 +82,8 @@
 
 </head>
 <body>
+<div id="notification-success" style="display: none;"></div>
+<div id="notification-fail" style="display: none;"></div>
 	<jsp:include page="template/header.jsp"></jsp:include>
 	<jsp:include page="template/sidebar.jsp"></jsp:include>
 

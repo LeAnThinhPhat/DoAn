@@ -8,6 +8,7 @@
 	
 	<body>
 		
+	<jsp:include page="../noti.jsp"></jsp:include>
 		<!----start-Header---->
 	 <jsp:include page="include/homeHeader.jsp"></jsp:include>
 		<!----End-Header---->

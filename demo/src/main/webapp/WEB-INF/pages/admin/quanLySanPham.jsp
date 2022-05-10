@@ -12,11 +12,16 @@
 .modal-open {
 	overflow: scroll;
 }
+
 </style>
+
 </head>
 <body>
+	<div id="notification-success" style="display: none;"></div>
+<div id="notification-fail" style="display: none;"></div>
 	<jsp:include page="template/header.jsp"></jsp:include>
 	<jsp:include page="template/sidebar.jsp"></jsp:include>
+	
 
 	<div class="col-md-9 animated bounce">
 		<h3 class="page-header">Quản lý Sản Phẩm</h3>
@@ -113,7 +118,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Thêm mới/ Cập
-								nhật Xe</h5>
+								nhật</h5>
 							<button type="button" class="close" data-dismiss="modal"
 								aria-label="Close">
 								<span aria-hidden="true">&times;</span>

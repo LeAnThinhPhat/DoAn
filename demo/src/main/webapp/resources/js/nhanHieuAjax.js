@@ -84,7 +84,8 @@ $(document).ready(function(){
 			success : function(response) {
 				if(response.status == "success"){
 					$('#nhanHieuModal').modal('hide');
-					alert("Thêm thành công");
+					$("#notification-success").fadeIn(500).text('Thêm nhãn hiệu thành công');				
+			        $("#notification-success").fadeOut(1000);
 				} else {
 			    	$('input').next().remove();
 		             $.each(response.errorMessages, function(key,value){
@@ -146,7 +147,8 @@ $(document).ready(function(){
 				
 				if(response.status == "success"){
 					$('#nhanHieuModal').modal('hide');
-					alert("Cập nhật thành công");
+					$("#notification-success").fadeIn(500).text('Cập nhật thành công');				
+			        $("#notification-success").fadeOut(1000);
 				} else {
 			    	$('input').next().remove();
 		            $.each(response.errorMessages, function(key,value){
@@ -155,7 +157,8 @@ $(document).ready(function(){
 				}
 			},
 			error : function(e) {
-				alert("Error!")
+				$("#notification-fail").fadeIn(500).text('Lỗi');				
+			    $("#notification-fail").fadeOut(1000);
 				console.log("ERROR: ", e);
 			}
 		});
@@ -174,11 +177,13 @@ $(document).ready(function(){
 			  url : "http://localhost:8080/lazapee/api/nhan-hieu/delete/" + nhanHieuId,
 			  success: function(resultMsg){
 				 resetDataForDelete();
-				 alert("Xóa thành công");
+				$("#notification-success").fadeIn(500).text('Xoá nhãn hiệu thành công');				
+			        $("#notification-success").fadeOut(1000);	
 			  },
 			  error : function(e) {
-				 alert("Không thể xóa nhãn hiệu này, hãy kiểm tra lại");
-				 console.log("ERROR: ", e);
+				$("#notification-fail").fadeIn(500).text('Không thể xoá nhãn hiệu này');				
+			    $("#notification-fail").fadeOut(1000);
+			    console.log("Error" , e );
 			  }
 		  });
 		}

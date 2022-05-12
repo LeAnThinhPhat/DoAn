@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<link href="Frontend/css/style.css" rel="stylesheet" type="text/css"
+<link href="Frontend/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="Frontend/css/notification.css" rel="stylesheet" type="text/css"
 	media="all" />
 <link
 	href='//fonts.googleapis.com/css?family=Londrina+Solid|Coda+Caption:800|Open+Sans'
@@ -61,9 +62,9 @@
 						<!-- 	<li><a href="<%=request.getContextPath()%>/checkout"">Thanh toán</a></li> -->
 						<li><a href="<%=request.getContextPath()%>/account">Tài
 								khoản</a></li>
-						<li><a href="<%=request.getContextPath()%>/cart"><span>Giỏ
-									hàng&nbsp;&nbsp; </span></a><span
-							class="glyphicon glyphicon-shopping-cart"></span></li>
+						<li><a href="<%=request.getContextPath()%>/cart">Giỏ
+									hàng<span
+							class="glyphicon glyphicon-shopping-cart"><sup id="QuantityOfCart">1</sup></span></a></li>
 						<li><a href="<%=request.getContextPath()%>/logout"> Đăng
 								xuất</a></li>
 					</ul>
@@ -75,8 +76,7 @@
 								kí</a></li>
 						<li><a href="<%=request.getContextPath()%>/login">Đăng
 								nhập</a></li>
-						<li><a href="<%=request.getContextPath()%>/cart">Giỏ hàng<span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-
+						<li><a href="<%=request.getContextPath()%>/cart">Giỏ hàng<span class="glyphicon glyphicon-shopping-cart"><sup id="QuantityOfCart">1</sup></span></a></li>		
 					</ul>
 				</c:if>
 			</div>

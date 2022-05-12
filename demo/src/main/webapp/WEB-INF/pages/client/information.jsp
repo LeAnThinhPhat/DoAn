@@ -4,6 +4,7 @@
 <html>
 	<head>
 	
+	 <jsp:include page="include/homeHeader.jsp"></jsp:include>
 	<title>Lazapee - Đổi thông tin tài khoản</title>
 	</head>
 
@@ -11,7 +12,6 @@
 	<body>
 		
 		<!----start-Header---->
-	 <jsp:include page="include/homeHeader.jsp"></jsp:include>
 		<!----End-Header---->
 		 
 	<jsp:include page="include/informationContent.jsp"></jsp:include>

@@ -20,7 +20,8 @@
 </script>
 
 <body>
-
+<div id="notification-success" style="display: none;"></div>
+<div id="notification-fail" style="display: none;"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-1"></div>

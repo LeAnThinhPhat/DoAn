@@ -88,8 +88,6 @@ public class CartController {
 		model.addAttribute("checkEmpty",listsp.size());
 		model.addAttribute("cart",listsp);
 		model.addAttribute("quanity",quanity);
-		
-		
 		return "client/cart";
 	}
 

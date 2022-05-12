@@ -19,7 +19,7 @@ public class GioHang {
 	@OneToOne
 	@JoinColumn(name = "ma_nguoi_dung")
 	private NguoiDung nguoiDung;
-
+	
 	public long getId() {
 		return id;
 	}

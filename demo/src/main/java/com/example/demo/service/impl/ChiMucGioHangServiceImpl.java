@@ -47,4 +47,8 @@ public class ChiMucGioHangServiceImpl implements ChiMucGioHangService{
 		repo.deleteAll(c);
 	}
 
+//	@Override
+//	public int findSoLuongBySanPhamAndGioHang(SanPham sp, GioHang g) {
+//		return repo.findSoLuongBySanPhamAndGioHang(sp, g);
+//	}
 }

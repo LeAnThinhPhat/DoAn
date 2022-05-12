@@ -50,12 +50,13 @@
     text-decoration:none;
 }
 </style>
+
+	<jsp:include page="include/homeHeader.jsp"></jsp:include>
 </head>
 <body>
 	
 	<jsp:include page="../noti.jsp"></jsp:include>
 	
-	<jsp:include page="include/homeHeader.jsp"></jsp:include>
 
 	<jsp:include page="include/homeContent.jsp"></jsp:include>
 

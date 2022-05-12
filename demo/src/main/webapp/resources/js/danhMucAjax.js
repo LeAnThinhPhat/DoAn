@@ -183,7 +183,7 @@ $(document).ready(function(){
 			  success: function(resultMsg){
 				 resetDataForDelete();
 				 $("#notification-success").fadeIn(500).text('Xoá sản phẩm thành công');				
-			        $("#notification-success").fadeOut(1000);
+			     $("#notification-success").fadeOut(1000);
 			  },
 			  error : function(e) {
 					$("#notification-fail").fadeIn(500).text('Xoá sản phẩm không thành công');				

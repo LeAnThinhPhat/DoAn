@@ -1,4 +1,3 @@
-
 function addToCart(id)
 	{
 		$.ajax({
@@ -13,7 +12,6 @@ function addToCart(id)
 				{
 					$("#notification-success").fadeIn(500).text('Sản phẩm đã được thêm vào giỏ hàng');				
 			        $("#notification-success").fadeOut(1000);
-
 				}		
 			},
 			error : function(e){
@@ -22,8 +20,6 @@ function addToCart(id)
 			    console.log("Error" , e );
 			}
 		});
-
-		
 	}
 
 

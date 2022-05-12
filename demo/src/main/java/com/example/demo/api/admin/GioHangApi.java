@@ -52,6 +52,7 @@ public class GioHangApi  {
 	public ResponseObject addToCart(@RequestParam String id,HttpServletRequest request,HttpServletResponse response) {
 		ResponseObject ro = new ResponseObject();
 		SanPham sp = sanPhamService.getSanPhamById(Long.parseLong(id));
+		int quantity = 0;
 		if(sp.getDonViKho() == 0)
 		{
 			ro.setStatus("false");
@@ -66,7 +67,7 @@ public class GioHangApi  {
 			for(int i=0;i<clientCookies.length;i++)
 			{
 				if(clientCookies[i].getName().equals(id))     //Neu san pham da co trong cookie tang so luong them 1
-				{				
+				{		
 					clientCookies[i].setValue(Integer.toString(Integer.parseInt(clientCookies[i].getValue())+1));
 					clientCookies[i].setPath("/lazapee");
 					clientCookies[i].setMaxAge(60*60*24*7);
@@ -105,8 +106,10 @@ public class GioHangApi  {
 				c.setSo_luong(c.getSo_luong()+1);
 			}
 			c = chiMucGioHangService.saveChiMucGiohang(c);
+//			quantity = chiMucGioHangService.findSoLuongBySanPhamAndGioHang(sp, g);
 		}
 		ro.setStatus("success");
+		ro.setData(5);
 		return ro;
 	}
 	
@@ -171,4 +174,34 @@ public class GioHangApi  {
 		ro.setStatus("success");
 		return ro;
 	}
+//	@GetMapping("/getSanPhamQuatity")
+//	public ResponseObject getQuanity(@RequestParam String id,@RequestParam String value,HttpServletRequest request,HttpServletResponse response) {
+//		int quantity = 0; 
+//		NguoiDung currentUser = getSessionUser(request);
+//		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//		ResponseObject ro = new ResponseObject();
+//		if(auth == null || auth.getPrincipal() == "anonymousUser" )    //Su dung cookie de luu
+//		{
+//			Cookie clientCookies[] = request.getCookies();
+//			for(int i=0;i<clientCookies.length;i++)
+//			{
+//				if(clientCookies[i].getName().equals(id))
+//				{						
+//					clientCookies[i].setValue(value);
+//					clientCookies[i].setPath("/lazapee");
+//					clientCookies[i].setMaxAge(60*60*24*7);
+//					response.addCookie(clientCookies[i]);
+//					break;
+//				}
+//			}
+//		}else //Su dung database de luu
+//		{
+//			GioHang g = gioHangService.getGioHangByNguoiDung(currentUser);
+//			SanPham sp = sanPhamService.getSanPhamById(Long.parseLong(id));
+//			quantity = chiMucGioHangService.findSoLuongBySanPhamAndGioHang(sp, g);
+//		}
+//		ro.setStatus("success");
+//		ro.setData(quantity);
+//		return ro;
+//	}
 }

@@ -40,7 +40,8 @@ function changeInformation()
 			contentType : "application/json",
 			url: "http://localhost:8080/lazapee/updateInfo",
 			success: function(result){
-				alert("Thông tin đã cập nhật");
+				$("#notification-success").fadeIn(500).text('Cập nhật thành công');				
+			    $("#notification-success").fadeOut(1000);
 				window.location.href = "/lazapee/account";
 			},
 			error : function(e){

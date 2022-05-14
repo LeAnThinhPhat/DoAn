@@ -17,5 +17,5 @@ public interface ChiMucGioHangRepository extends JpaRepository<ChiMucGioHang, Lo
 	List<ChiMucGioHang> findByGioHang(GioHang g);
 	
 //	@Query("select sum(so_luong) from chi_muc_gio_hang where ma_gio_hang = :ma_gio_hang group by ma_gio_hang")
-	int findSoLuongBySanPhamAndGioHang(SanPham sp,GioHang g);
+//	int findSoLuongBySanPhamAndGioHang(SanPham sp,GioHang g);
 }

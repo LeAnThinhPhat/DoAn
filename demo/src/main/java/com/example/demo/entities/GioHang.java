@@ -20,6 +20,16 @@ public class GioHang {
 	@JoinColumn(name = "ma_nguoi_dung")
 	private NguoiDung nguoiDung;
 	
+	public int getSo_luong() {
+		return so_luong;
+	}
+
+	public void setSo_luong(int so_luong) {
+		this.so_luong = so_luong;
+	}
+
+	private int so_luong;
+	
 	public long getId() {
 		return id;
 	}

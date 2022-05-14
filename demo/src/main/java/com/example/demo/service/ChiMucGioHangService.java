@@ -17,5 +17,6 @@ public interface ChiMucGioHangService{
 	void deleteChiMucGiohang(ChiMucGioHang c);
 	
 	void deleteAllChiMucGiohang(List<ChiMucGioHang> c);
-	
+
+//	int findSoLuongBySanPhamAndGioHang(SanPham sp,GioHang g);
 }

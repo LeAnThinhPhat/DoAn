@@ -11,14 +11,13 @@ import com.example.demo.repository.ChiTietDonHangRepository;
 import com.example.demo.service.ChiTietDonHangService;
 
 @Service
-public class ChiTietDonHangServiceImpl implements ChiTietDonHangService{
-	
+public class ChiTietDonHangServiceImpl implements ChiTietDonHangService {
+
 	@Autowired
 	private ChiTietDonHangRepository repo;
-	
+
 	@Override
-	public List<ChiTietDonHang> save(List<ChiTietDonHang> list)
-	{	
+	public List<ChiTietDonHang> save(List<ChiTietDonHang> list) {
 		return repo.saveAll(list);
 	}
 }

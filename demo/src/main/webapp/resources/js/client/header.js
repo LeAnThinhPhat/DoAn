@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	ajaxGet2();
+	countQuantity()
 	function ajaxGet2(){
 		$.ajax({
 			type: "GET",		
@@ -16,3 +17,18 @@ $(document).ready(function(){
 			
 	}
 })
+function countQuantity()
+	{
+		$.ajax({
+			type: "GET",		
+			url: "http://localhost:8080/lazapee/api/gio-hang/getSanPhamQuatity",
+			success: function(result){	
+					$("#quantityOfCart").html(result.data);					
+			},
+			error : function(e){
+				$("#notification-fail").fadeIn(500).text('Error' + e);				
+			    $("#notification-fail").fadeOut(1000);
+			    console.log("Error" , e );
+			}
+		});
+	}

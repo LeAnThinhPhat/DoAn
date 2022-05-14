@@ -1,4 +1,3 @@
-
 function addToCart(id)
 	{
 		$.ajax({
@@ -13,7 +12,7 @@ function addToCart(id)
 				{
 					$("#notification-success").fadeIn(500).text('Sản phẩm đã được thêm vào giỏ hàng');				
 			        $("#notification-success").fadeOut(1000);
-
+			        countQuantity();
 				}		
 			},
 			error : function(e){
@@ -22,14 +21,27 @@ function addToCart(id)
 			    console.log("Error" , e );
 			}
 		});
-
-		
 	}
-
+	
+function countQuantity()
+	{
+		$.ajax({
+			type: "GET",		
+			url: "http://localhost:8080/lazapee/api/gio-hang/getSanPhamQuatity",
+			success: function(result){	
+					$("#quantityOfCart").html(result.data);					
+			},
+			error : function(e){
+				$("#notification-fail").fadeIn(500).text('Error' + e);				
+			    $("#notification-fail").fadeOut(1000);
+			    console.log("Error" , e );
+			}
+		});
+	}
 
 $(document).ready(function(){
 	ajaxGet();
-
+	countQuantity();
 	function ajaxGet(){
 		$.ajax({
 			type: "GET",		
@@ -97,7 +109,7 @@ $(document).ready(function(){
 				});
 			},
 			error : function(e){
-				$("#notification-fail").fadeIn(500).text('Error' + e);				
+				$("#notification-fail").fadeIn(500).text('Erro' + e);				
 			    $("#notification-fail").fadeOut(1000);
 			    console.log("Error" , e );
 			}

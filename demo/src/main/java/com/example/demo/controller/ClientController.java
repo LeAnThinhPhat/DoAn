@@ -181,10 +181,4 @@ public class ClientController {
 		return "client/shipping";
 	}
 
-	@GetMapping("/guarantee")
-	public String guaranteePage(Model model) {
-
-		return "client/guarantee";
-	}
-
 }
